@@ -1,279 +1,49 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spark 4 Change — When Businesses Thrive, Communities Survive</title>
-  <meta name="description" content="The Dynamics of Local Business Survival and Social Impact in San Diego — Spark 4 Change." />
-  <meta property="og:title" content="Spark 4 Change — San Diego Business Survival & Social Impact" />
-  <meta property="og:description" content="Project connecting business vitality, unemployment, and homelessness with data, EDA, and policy insights." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0f172a" />
-  <style>
-    :root{
-      --bg:#0b1020;--bg-soft:#0f1a36;--card:#0e1a32;--ink:#e6eefc;--muted:#9db0d9;--brand:#2dd4bf;--accent:#60a5fa;
-      --ring: rgba(45,212,191,.35);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-      color:var(--ink); background:linear-gradient(180deg,#0b1020 0%, #0a1330 100%);
-    }
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    /* NAV */
-    .nav{
-      position:sticky;top:0;z-index:20;background:rgba(11,16,32,.7);backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(255,255,255,.06)
-    }
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;gap:10px;align-items:center;font-weight:700;letter-spacing:.3px}
-    .brand .dot{width:10px;height:10px;border-radius:999px;background:var(--brand);box-shadow:0 0 18px var(--brand)}
-    .nav a{margin:0 10px;color:var(--ink);opacity:.85}
-    .nav a:hover{opacity:1}
-    /* HERO */
-    .hero{padding:80px 0 40px;border-bottom:1px solid rgba(255,255,255,.06)}
-    .hero h1{
-      font-size: clamp(28px, 4.2vw, 48px); line-height:1.1; margin:10px 0 16px; letter-spacing:.2px;
-    }
-    .sub{color:var(--muted)}
-    .pill{
-      display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid rgba(255,255,255,.12);
-      border-radius:999px;color:var(--muted);background:rgba(255,255,255,.04)
-    }
-    .cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);
-      background:linear-gradient(180deg,#12224b,#0f1a36); color:var(--ink); text-decoration:none; box-shadow:0 10px 25px rgba(0,0,0,.25);
-    }
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{background:linear-gradient(180deg,#12b3a4,#0891b2); border-color:transparent}
-    /* SECTIONS */
-    section{padding:60px 0;border-bottom:1px solid rgba(255,255,255,.06)}
-    h2{font-size: clamp(22px, 3vw, 30px); margin:0 0 18px}
-    .grid{display:grid;gap:18px}
-    @media (min-width:900px){.grid.two{grid-template-columns:1.2fr .8fr}}
-    .card{
-      background:linear-gradient(180deg,#0e1a32,#0d1a36); border:1px solid rgba(255,255,255,.08);
-      border-radius:18px; padding:20px; box-shadow:0 12px 30px rgba(5,8,20,.35);
-    }
-    ul{margin:0;padding-left:20px}
-    li{margin:.3em 0}
-    .team{
-      display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    }
-    .member{padding:18px;border:1px solid rgba(255,255,255,.08);border-radius:16px;background:linear-gradient(180deg,#0d1a34,#0f2040)}
-    .muted{color:var(--muted)}
-    /* EDA gallery placeholders */
-    .gallery{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
-    .thumb{height:180px;border-radius:14px;background:#0c1734;border:1px dashed rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:var(--muted)}
-    /* FOOTER */
-    footer{padding:28px 0;color:var(--muted)}
-    /* helper */
-    .note{font-size:14px;color:var(--muted)}
-    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:rgba(255,255,255,.06); padding:.2em .45em; border-radius:6px; border:1px solid rgba(255,255,255,.12)}
-    /* focus ring */
-    :focus-visible{outline:2px solid var(--ring); outline-offset:2px; border-radius:6px}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Spark 4 Change — When Businesses Thrive, Communities Survive</title>
+<meta name="description" content="The Dynamics of Local Business Survival and Social Impact in San Diego — Spark 4 Change." />
+<meta property="og:title" content="Spark 4 Change — San Diego Business Survival & Social Impact" />
+<meta property="og:description" content="Project connecting business vitality, unemployment, and homelessness with data, EDA, and policy insights." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#0f172a" />
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <div class="brand"><span class="dot"></span> Spark 4 Change</div>
-      <div>
-        <a href="#home">Home</a>
-        <a href="#team">Team</a>
-        <a href="#intro">Introduction</a>
-        <a href="#goals">Goals</a>
-        <a href="#outcomes">Outcomes</a>
-        <a href="#datasets">Data Sets</a>
-        <a href="#method">Methodology</a>
-        <a href="#eda">EDA</a>
-      </div>
-    </div>
-  </nav>
+<nav class="nav">
+<div class="container nav-inner">
+<div class="brand"><span class="dot"></span> Spark 4 Change</div>
+<div>
+<a href="#home">Home</a>
+<a href="#team">Team</a>
+<a href="#intro">Introduction</a>
+<a href="#goals">Goals</a>
+<a href="#outcomes">Outcomes</a>
+<a href="#datasets">Data Sets</a>
+<a href="#method">Methodology</a>
+<a href="#eda">EDA</a>
+</div>
+</div>
+</nav>
 
-  <header id="home" class="hero">
-    <div class="container">
-      <span class="pill">Prepared by group Spark 4Change • 30 Sep, 2025</span>
-      <h1>The Dynamics of Local Business Survival and Social Impact in San Diego</h1>
-      <p class="sub">When Businesses Thrive, Communities Survive.</p>
-      <div class="cta">
-        <!-- Replace the href with your actual GitHub repo once created -->
-        <a class="btn primary" href="#eda" aria-label="Jump to EDA section">See the EDA</a>
-        <a class="btn" href="#outcomes">Expected Outcomes</a>
-      </div>
-    </div>
-  </header>
 
-  <section id="team">
-    <div class="container">
-      <h2>Team</h2>
-      <div class="team">
-        <div class="member"><strong>Sudesna Das Rochi</strong><div class="muted">Analytics & Storytelling</div></div>
-        <div class="member"><strong>Sahitya Kotla</strong><div class="muted">Data Engineering</div></div>
-        <div class="member"><strong>Swasthika Rajendran</strong><div class="muted">Modeling</div></div>
-        <div class="member"><strong>Aneesha Prasad</strong><div class="muted">Visualization</div></div>
-      </div>
-      <p class="note" style="margin-top:10px">Names/roles pulled from the project slides. Update roles as needed.</p>
-    </div>
-  </section>
+<header id="home" class="hero">
+<div class="container">
+<span class="pill">Prepared by group Spark 4Change</span>
+<h1>The Dynamics of Local Business Survival and Social Impact in San Diego</h1>
+<p class="sub">When Businesses Thrive, Communities Survive.</p>
+<div class="cta">
+<a class="btn primary" href="#eda" aria-label="Jump to EDA section">See the EDA</a>
+<a class="btn" href="#outcomes">Expected Outcomes</a>
+</div>
+</div>
+</header>
 
-  <section id="intro">
-    <div class="container grid two">
-      <div class="card">
-        <h2>Introduction</h2>
-        <ul>
-          <li>Local businesses are a backbone of San Diego’s economy.</li>
-          <li>Closures lead to unemployment and weaken community stability.</li>
-          <li>Unemployment pressures can contribute to homelessness over time.</li>
-          <li>We connect business vitality → unemployment → homelessness.</li>
-        </ul>
-        <p class="note">Source: Spark 4 Change slide deck.</p>
-      </div>
-      <div class="card">
-        <h2>Project Pulse</h2>
-        <p class="muted">A concise statement of purpose to guide readers and stakeholders.</p>
-        <ul class="muted">
-          <li>Explain the “why” in plain language.</li>
-          <li>Link to data and visuals for transparency.</li>
-          <li>Offer actionable insights for policy & programs.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
-  <section id="goals">
-    <div class="container">
-      <h2>Goals</h2>
-      <div class="grid two">
-        <div class="card">
-          <ul>
-            <li>Analyze business survival trends in San Diego.</li>
-            <li>Study how closures affect unemployment & homelessness.</li>
-            <li>Inform policies that strengthen the economy and support communities.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="note">Tip: Keep this section brief on the website and link deep-dives to your EDA and write-ups.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="outcomes">
-    <div class="container">
-      <h2>Expected Outcomes</h2>
-      <div class="grid two">
-        <div class="card">
-          <h3>a) Training & Knowledge Access</h3>
-          <ul>
-            <li>Launch training on policy, financial literacy, digital marketing, and crisis management.</li>
-            <li>Provide guidance for permits, taxes, and support programs.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>b) A User-Friendly Platform</h3>
-          <ul>
-            <li>Plain-language policy explainers.</li>
-            <li>Step-by-step modules: videos, toolkits, checklists.</li>
-            <li>Connections to grants, loans, workforce programs.</li>
-            <li>Track survival tips, legal changes, and local resources.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>c) Workforce Training & Employment Links</h3>
-          <ul>
-            <li>Job-matching tools to connect residents with local businesses.</li>
-            <li>Apprenticeships and upskilling for shifting industries.</li>
-          </ul>
-        </div>
-      </div>
-      <p class="note">Content adapted from the deck for web readability.</p>
-    </div>
-  </section>
-
-  <section id="datasets">
-    <div class="container">
-      <h2>Data Sets</h2>
-      <div class="grid two">
-        <div class="card">
-          <ul>
-            <li><strong>Population growth vs. unemployment over time</strong> — stability vs. stress.</li>
-            <li><strong>New business registrations & closures per year</strong> — dynamics & competition.</li>
-            <li><strong>Business locations vs. homeless projects</strong> — proximity & opportunity mapping.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <p class="muted">Primary sources referenced in the project:</p>
-          <ul>
-            <li><a href="https://data.sandiego.gov/datasets/" target="_blank" rel="noopener">City of San Diego Open Data</a></li>
-            <li><a href="https://opendata.sandag.org/" target="_blank" rel="noopener">SANDAG Open Data</a></li>
-            <li><a href="https://catalog.data.gov/dataset/?tags=san+diego" target="_blank" rel="noopener">Data.gov (San Diego tag)</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="note">For reproducibility, list exact dataset names/IDs in your README.</p>
-    </div>
-  </section>
-
-  <section id="method">
-    <div class="container">
-      <h2>Methodology</h2>
-      <div class="grid two">
-        <div class="card">
-          <ul>
-            <li><strong>Data Collection</strong>, then <strong>Preprocessing</strong> (missing values, encoding, feature selection).</li>
-            <li><strong>EDA:</strong> spatial mapping (hotspots of closures), time-series trends & forecasting.</li>
-            <li><strong>Models:</strong> Logistic Regression & Random Forest (closure risk), Clustering (ecosystems).</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="note">Keep a concise methods overview here; link to notebooks for the full technical detail.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="eda">
-    <div class="container">
-      <h2>Exploratory Data Analysis</h2>
-      <p>
-        Your full EDA and code are available in Colab:
-      </p>
-      <!-- Replace the href with your Colab link -->
-      <p>
-        <a class="btn primary" href="https://colab.research.google.com/drive/1Xa5_e0pcSNnk2MK0d8ZOCOGvUGKisKZn?usp=chrome_ntp" target="_blank" rel="noopener">
-          🔗 Open the EDA in Colab
-        </a>
-      </p>
-      <p class="note">
-        Embedding Colab directly in iframes is often blocked. Best practice: export key charts as PNGs from Colab
-        (e.g., <span class="kbd">plt.savefig('/content/figs/closures_by_year.png', dpi=180)</span>), download them,
-        then place files in <span class="kbd">/assets/images/</span> and reference below.
-      </p>
-
-      <div class="gallery">
-        <!-- Replace the placeholders with your exported charts -->
-        <div class="thumb">/assets/images/closures_by_year.png</div>
-        <div class="thumb">/assets/images/unemployment_trend.png</div>
-        <div class="thumb">/assets/images/spatial_hotspots.png</div>
-        <div class="thumb">/assets/images/feature_importance_rf.png</div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="container">
-    <div>© <span id="y"></span> Spark 4 Change • San Diego</div>
-    <div class="note">Site content adapted from the Spark 4 Change slide deck. Thank you.</div>
-  </footer>
-
-  <script>
-    // year
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
+<section id="team">
+<div class="container">
+<h2>Team</h2>
+<div class="team">
 </html>
-
