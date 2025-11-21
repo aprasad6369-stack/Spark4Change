@@ -1,49 +1,44 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Spark 4 Change — When Businesses Thrive, Communities Survive</title>
-<meta name="description" content="The Dynamics of Local Business Survival and Social Impact in San Diego — Spark 4 Change." />
-<meta property="og:title" content="Spark 4 Change — San Diego Business Survival & Social Impact" />
-<meta property="og:description" content="Project connecting business vitality, unemployment, and homelessness with data, EDA, and policy insights." />
-<meta property="og:type" content="website" />
-<meta name="theme-color" content="#0f172a" />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Business Survival — San Diego</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<nav class="nav">
-<div class="container nav-inner">
-<div class="brand"><span class="dot"></span> Spark 4 Change</div>
-<div>
-<a href="#home">Home</a>
-<a href="#team">Team</a>
-<a href="#intro">Introduction</a>
-<a href="#goals">Goals</a>
-<a href="#outcomes">Outcomes</a>
-<a href="#datasets">Data Sets</a>
-<a href="#method">Methodology</a>
-<a href="#eda">EDA</a>
-</div>
-</div>
-</nav>
+  <header>
+    <h1>When Businesses Thrive, Communities Survive</h1>
+    <p>EDA on San Diego’s local business dynamics and community impact.</p>
+    <nav><a href="about.html">About & Data</a></nav>
+  </header>
 
+  <main class="grid">
+    <article>
+      <h2>Registrations vs Closures</h2>
+      <p>Are we creating firms faster than we’re losing them?</p>
+      <iframe src="viz/registrations_closures.html" loading="lazy" title="Registrations vs Closures"></iframe>
+    </article>
 
-<header id="home" class="hero">
-<div class="container">
-<span class="pill">Prepared by group Spark 4Change</span>
-<h1>The Dynamics of Local Business Survival and Social Impact in San Diego</h1>
-<p class="sub">When Businesses Thrive, Communities Survive.</p>
-<div class="cta">
-<a class="btn primary" href="#eda" aria-label="Jump to EDA section">See the EDA</a>
-<a class="btn" href="#outcomes">Expected Outcomes</a>
-</div>
-</div>
-</header>
+    <article>
+      <h2>Population vs Unemployment</h2>
+      <p>Macro conditions tied to local vitality.</p>
+      <iframe src="viz/pop_unemp.html" loading="lazy" title="Population vs Unemployment"></iframe>
+    </article>
 
+    <article>
+      <h2>Closures Hotspots Map</h2>
+      <p>Which neighborhoods see more churn?</p>
+      <iframe src="viz/closures_map.html" loading="lazy" title="Closures Map"></iframe>
+    </article>
 
-<section id="team">
-<div class="container">
-<h2>Team</h2>
-<div class="team">
+    <article>
+      <h2>Survival Explorer (demo)</h2>
+      <p>Illustrative model: odds a business survives (by sector, age, location).</p>
+      <iframe src="viz/survival_explorer.html" loading="lazy" title="Survival Explorer"></iframe>
+    </article>
+  </main>
+
+  <footer><small>© Spark 4Change</small></footer>
+</body>
 </html>
