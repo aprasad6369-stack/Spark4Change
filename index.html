@@ -1,44 +1,638 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Business Survival — San Diego</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="UTF-8" />
+  <title>Spark 4Change – When Businesses Thrive, Communities Survive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Spark 4Change: The Dynamics of Local Business Survival and Social Impact in San Diego."
+  />
+  <style>
+    :root {
+      --primary: #004b6b;
+      --primary-light: #e6f2f7;
+      --accent: #f4b400;
+      --bg: #fafafa;
+      --text: #1f2933;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header & Navigation */
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #0077a6);
+      color: white;
+      padding: 1.2rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-title span:first-child {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .logo-title span:last-child {
+      font-size: 0.8rem;
+      opacity: 0.9;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: #eaf6ff;
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      text-decoration: none;
+    }
+
+    /* Hero */
+
+    .hero {
+      background: var(--primary-light);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 2.4vw + 1rem, 2.5rem);
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      font-weight: 500;
+      font-size: 1.05rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-meta {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0.55rem 1.1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.1s ease, box-shadow 0.1s ease,
+        background-color 0.1s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #2f2f2f;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+      text-decoration: none;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--primary);
+      border-color: rgba(0, 75, 107, 0.25);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+
+    .hero-card {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      padding: 1.25rem 1.4rem;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      font-size: 0.9rem;
+    }
+
+    .hero-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.7rem;
+      color: var(--primary);
+    }
+
+    .hero-card ul {
+      list-style: disc;
+      padding-left: 1.1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-card li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* Layout for content sections */
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 1.6fr);
+      gap: 2.2rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h2.section-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 0.6rem;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin: 0.5rem 0 0.3rem;
+    }
+
+    p {
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 0.9rem;
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+      margin-bottom: 1rem;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.16rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--primary-light);
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+
+    /* Sidebar */
+
+    .sidebar-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .sidebar-card {
+      background: var(--card-bg);
+      border-radius: 0.9rem;
+      padding: 0.9rem 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .team-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .team-list li::before {
+      content: "•";
+      color: var(--primary);
+      display: inline-block;
+      width: 0.9rem;
+      margin-left: 0.1rem;
+    }
+
+    .dataset-links a {
+      display: inline-block;
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+
+    footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 1.3rem 1.5rem 2rem;
+      background: #f3f4f6;
+      font-size: 0.85rem;
+      color: #4b5563;
+    }
+
+    footer .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+  </style>
 </head>
 <body>
+  <!-- Top navigation -->
   <header>
-    <h1>When Businesses Thrive, Communities Survive</h1>
-    <p>EDA on San Diego’s local business dynamics and community impact.</p>
-    <nav><a href="about.html">About & Data</a></nav>
+    <div class="nav-container">
+      <div class="logo-title">
+        <span>SPARK 4CHANGE</span>
+        <span>Local Business Survival &amp; Community Impact in San Diego</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#goals">Goals</a></li>
+          <li><a href="#outcomes">Expected Outcomes</a></li>
+          <li><a href="#methods">Data &amp; Methods</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="grid">
-    <article>
-      <h2>Registrations vs Closures</h2>
-      <p>Are we creating firms faster than we’re losing them?</p>
-      <iframe src="viz/registrations_closures.html" loading="lazy" title="Registrations vs Closures"></iframe>
-    </article>
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>When Businesses Thrive, Communities Survive</h1>
+        <h2>
+          The Dynamics of Local Business Survival and Social Impact in San Diego
+        </h2>
+        <div class="hero-meta">
+          Prepared by <strong>Spark 4Change</strong> · San Diego · 30 Sep 2025
+        </div>
+        <p>
+          Local businesses are the backbone of San Diego’s economy. When they
+          close, unemployment rises and community stability is threatened. Our
+          project explores how business vitality connects to unemployment and
+          what we can do about it.
+        </p>
+        <div class="hero-actions">
+          <a
+            class="btn btn-primary"
+            href="https://colab.research.google.com/drive/1Xa5_e0pcSNnk2MK0d8ZOCOGvUGKisKZn"
+            target="_blank"
+            rel="noopener noreferrer"
+            >View Analysis Notebook (Colab)</a
+          >
+          <a class="btn btn-ghost" href="#outcomes">Jump to Outcomes</a>
+        </div>
+      </div>
 
-    <article>
-      <h2>Population vs Unemployment</h2>
-      <p>Macro conditions tied to local vitality.</p>
-      <iframe src="viz/pop_unemp.html" loading="lazy" title="Population vs Unemployment"></iframe>
-    </article>
+      <aside class="hero-card">
+        <h3>Project Snapshot</h3>
+        <ul>
+          <li>Region: <strong>San Diego</strong></li>
+          <li>Focus: <strong>Local business survival &amp; unemployment</strong></li>
+          <li>
+            Approach: <strong>Spatial analysis, time-series trends, ML models</strong>
+          </li>
+        </ul>
+        <p>
+          We combine open data, exploratory analysis, and predictive modeling to
+          inform policies and tools that help businesses stay open and people
+          stay employed.
+        </p>
+      </aside>
+    </div>
+  </section>
 
-    <article>
-      <h2>Closures Hotspots Map</h2>
-      <p>Which neighborhoods see more churn?</p>
-      <iframe src="viz/closures_map.html" loading="lazy" title="Closures Map"></iframe>
-    </article>
+  <!-- Main layout -->
+  <main>
+    <!-- Left column: main content -->
+    <div>
+      <section id="overview">
+        <h2 class="section-title">Project Overview</h2>
+        <div class="card">
+          <span class="pill">Why it matters</span>
+          <p>
+            Local businesses generate jobs, services, and neighborhood identity
+            for San Diego. When they shut down, the effects ripple outward:
+            higher unemployment, reduced access to services, and increased
+            economic stress for already vulnerable communities.
+          </p>
+          <p>
+            This project connects <strong>business vitality</strong> to
+            <strong>unemployment</strong>, highlighting where communities are
+            most at risk and how targeted support can make a difference.
+          </p>
+        </div>
+      </section>
 
-    <article>
-      <h2>Survival Explorer (demo)</h2>
-      <p>Illustrative model: odds a business survives (by sector, age, location).</p>
-      <iframe src="viz/survival_explorer.html" loading="lazy" title="Survival Explorer"></iframe>
-    </article>
+      <section id="goals">
+        <h2 class="section-title">Goals</h2>
+        <div class="card">
+          <ul>
+            <li>
+              <strong>Analyze business survival trends</strong> in San Diego,
+              including openings, closures, and patterns over time.
+            </li>
+            <li>
+              <strong>Study how business closures impact unemployment,</strong>
+              especially in vulnerable neighborhoods.
+            </li>
+            <li>
+              <strong>Provide insights for policies and tools</strong> that
+              strengthen the local economy and support communities.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="outcomes">
+        <h2 class="section-title">Expected Outcomes</h2>
+
+        <div class="card">
+          <span class="pill">Outcome A</span>
+          <h3>Training &amp; Knowledge Access</h3>
+          <ul>
+            <li>
+              Launch training programs on
+              <strong>business policies, financial literacy, digital marketing,
+              and crisis management</strong>.
+            </li>
+            <li>
+              Provide clear guidance for navigating
+              <strong>permits, taxes, and government support programs</strong>.
+            </li>
+            <li>
+              Translate complex regulations into
+              <strong>plain-language guides</strong> that busy owners can use.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="pill">Outcome B</span>
+          <h3>A User-Friendly Online Platform</h3>
+          <ul>
+            <li>
+              Build a central <strong>website hub</strong> where entrepreneurs and
+              workers can:
+              <ul>
+                <li>Learn about business policies in accessible language.</li>
+                <li>
+                  Access step-by-step training modules (videos, toolkits, and
+                  checklists).
+                </li>
+                <li>
+                  Connect with <strong>grants, loans, and workforce programs</strong>.
+                </li>
+                <li>
+                  Track <strong>business survival tips, legal updates, and local
+                  resources</strong>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="pill">Outcome C</span>
+          <h3>Workforce Training &amp; Employment Links</h3>
+          <ul>
+            <li>
+              Offer <strong>job-matching tools</strong> to connect unemployed
+              residents with local businesses that are hiring.
+            </li>
+            <li>
+              Create <strong>apprenticeships and upskilling courses</strong> to
+              prepare workers for shifts in local industries.
+            </li>
+            <li>
+              Align training content with the sectors most at risk of closures to
+              reduce unemployment before it spikes.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="methods">
+        <h2 class="section-title">Data &amp; Methodology</h2>
+
+        <div class="card">
+          <span class="pill">Data Collection &amp; Preparation</span>
+          <ul>
+            <li>Gather open data on population, unemployment, and businesses.</li>
+            <li>Handle missing values, encode categories, and select features.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="pill">Exploratory Analysis</span>
+          <h3>Spatial Mapping</h3>
+          <p>
+            Map the location of businesses and closures to identify geographic
+            hotspots—areas where communities may be losing access to jobs and
+            essential services.
+          </p>
+          <h3>Time-Series Analysis</h3>
+          <p>
+            Analyze trends in <strong>business creation and closure over time</strong>,
+            and forecast future changes to anticipate risk.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="pill">Machine Learning</span>
+          <ul>
+            <li>
+              <strong>Logistic Regression</strong> – Predict whether a particular
+              business is likely to close.
+            </li>
+            <li>
+              <strong>Random Forest</strong> – Improve prediction accuracy and
+              uncover deeper insights into risk factors.
+            </li>
+            <li>
+              <strong>Clustering</strong> – Discover main business ecosystems in
+              San Diego (e.g., neighborhood-level or sector-level patterns).
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- Right column: sidebar -->
+    <aside>
+      <section id="team">
+        <h2 class="sidebar-title">Team Spark 4Change</h2>
+        <div class="sidebar-card">
+          <ul class="team-list">
+            <li>Sudesna Das Rochi</li>
+            <li>Sahitya Kotla</li>
+            <li>Swasthika Rajendran</li>
+            <li>Aneesha Prasad</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="datasets">
+        <h2 class="sidebar-title">Key Data Sets</h2>
+        <div class="sidebar-card dataset-links">
+          <p><strong>Population &amp; Unemployment Over Time</strong></p>
+          <p>
+            Used to reveal broader economic stability or stress in San Diego.
+          </p>
+          <p><strong>Business Registrations &amp; Closures</strong></p>
+          <p>
+            Tracks economic dynamics—rising registrations may indicate growth,
+            while rising closures may signal instability or competition.
+          </p>
+          <p><strong>Business Location Data</strong></p>
+          <p>
+            Helps identify spatial patterns and potential opportunities for
+            access to jobs and services.
+          </p>
+          <hr style="margin: 0.7rem 0;" />
+          <p><strong>Data Sources</strong></p>
+          <a href="https://data.sandiego.gov/datasets/" target="_blank" rel="noopener noreferrer">
+            data.sandiego.gov/datasets
+          </a><br />
+          <a href="https://opendata.sandag.org/" target="_blank" rel="noopener noreferrer">
+            opendata.sandag.org
+          </a><br />
+          <a href="https://catalog.data.gov/dataset/?tags=san+diego" target="_blank" rel="noopener noreferrer">
+            catalog.data.gov – San Diego tagged datasets
+          </a>
+        </div>
+      </section>
+
+      <section id="resources">
+        <h2 class="sidebar-title">Project Resources</h2>
+        <div class="sidebar-card">
+          <ul>
+            <li>
+              <strong>Analysis Notebook:</strong><br />
+              <a
+                href="https://colab.research.google.com/drive/1Xa5_e0pcSNnk2MK0d8ZOCOGvUGKisKZn"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Google Colab – Spark 4Change</a
+              >
+            </li>
+            <li>
+              <strong>Presentation Slides:</strong><br />
+              Spark 4Change – When Businesses Thrive, Communities Survive.
+            </li>
+            <li>
+              <strong>Future Work:</strong><br />
+              Implement the training hub, integrate live data feeds, and
+              collaborate with local organizations to pilot job-matching tools.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </aside>
   </main>
 
-  <footer><small>© Spark 4Change</small></footer>
+  <footer>
+    <div class="footer-inner">
+      <span>© 2025 Spark 4Change · San Diego State University (project)</span>
+      <span>“When businesses thrive, communities survive.”</span>
+    </div>
+  </footer>
 </body>
 </html>
