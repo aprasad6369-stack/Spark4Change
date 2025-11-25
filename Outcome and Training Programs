@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spark 4Change – Outcomes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo-title">
+        <span>SPARK 4CHANGE</span>
+        <span>Local Business Survival &amp; Community Impact in San Diego</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="outcomes.html" class="active">Outcomes</a></li>
+          <li><a href="methods.html">Data &amp; Methods</a></li>
+          <li><a href="resources.html">Permits &amp; Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <h1 class="page-title">Outcomes</h1>
+
+  <main>
+    <div>
+      <section id="outcomes">
+        <h2 class="section-title">Core Outcomes</h2>
+
+        <!-- Outcome A -->
+        <div class="card">
+          <span class="pill">Outcome A</span>
+          <h3>Training &amp; Knowledge Access</h3>
+          <ul>
+            <li>
+              Launch training programs on
+              <strong>business policies, financial literacy, digital marketing,
+              and crisis management</strong>.
+            </li>
+            <li>
+              Provide clear guidance for navigating
+              <strong>permits, taxes, and government support programs</strong>
+              through curated online resources and local partners.
+            </li>
+            <li>
+              Translate complex regulations into
+              <strong>plain-language guides</strong> that busy owners can use.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Outcome B -->
+        <div class="card">
+          <span class="pill">Outcome B</span>
+          <h3>A User-Friendly Online Platform</h3>
+          <ul>
+            <li>
+              Build a central <strong>website hub</strong> where entrepreneurs
+              and workers can:
+              <ul>
+                <li>Learn about business policies in accessible language.</li>
+                <li>
+                  Access step-by-step training modules, videos, toolkits, and
+                  checklists.
+                </li>
+                <li>
+                  Connect with <strong>grants, loans, and workforce programs</strong>.
+                </li>
+                <li>
+                  Track <strong>business survival tips, legal updates, and local
+                  resources</strong>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Outcome C -->
+        <div class="card">
+          <span class="pill">Outcome C</span>
+          <h3>Workforce Training &amp; Employment Links</h3>
+          <ul>
+            <li>
+              Offer <strong>job-matching tools</strong> to connect unemployed
+              residents with local businesses that are hiring.
+            </li>
+            <li>
+              Create <strong>apprenticeships and upskilling courses</strong> to
+              prepare workers for shifts in local industries.
+            </li>
+            <li>
+              Align training content with sectors most at risk of closures to
+              reduce unemployment before it spikes.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="training">
+        <h2 class="section-title">Sample Training Programs</h2>
+
+        <!-- Business policies / law -->
+        <div class="card">
+          <span class="pill">Business Policies &amp; Law</span>
+          <h3>Understanding Business Rules &amp; Compliance</h3>
+          <p>
+            These programs help owners understand contracts, regulations, and
+            policies that affect how they operate.
+          </p>
+          <ul>
+            <li>
+              <a
+                href="https://www.sba.gov/sba-learning-platform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SBA Learning Platform – Courses on planning, launching, and
+                managing a small business
+              </a>
+              :contentReference[oaicite:0]{index=0}
+            </li>
+            <li>
+              <a
+                href="https://www.coursera.org/courses?query=business+law"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Coursera – Business Law course catalog (contracts, compliance,
+                governance)
+              </a>
+              :contentReference[oaicite:1]{index=1}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Financial literacy -->
+        <div class="card">
+          <span class="pill">Financial Literacy</span>
+          <h3>Managing Cash Flow, Credit &amp; Capital</h3>
+          <p>
+            Financial literacy programs teach owners how to read financial
+            statements, plan for taxes, and make funding decisions.
+          </p>
+          <ul>
+            <li>
+              <a
+                href="https://www.fdic.gov/consumer-resource-center/money-smart-small-business"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                FDIC Money Smart for Small Business – Free financial education
+                curriculum
+              </a>
+              :contentReference[oaicite:2]{index=2}
+            </li>
+            <li>
+              <a
+                href="https://aofund.org/news/digital-financial-learning-platform-for-small-businesses/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                “Learn with AOF” – Free financial management course for small
+                businesses
+              </a>
+              :contentReference[oaicite:3]{index=3}
+            </li>
+            <li>
+              <a
+                href="https://www.sba.gov/blog/2025/2025-04/financial-literacy-resources-americas-small-businesses"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SBA – Financial literacy resources for small business owners
+              </a>
+              :contentReference[oaicite:4]{index=4}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Digital marketing -->
+        <div class="card">
+          <span class="pill">Digital Marketing</span>
+          <h3>Reaching Customers Online</h3>
+          <p>
+            Digital marketing courses help local businesses attract customers
+            through social media, search, and content marketing.
+          </p>
+          <ul>
+            <li>
+              <a
+                href="https://www.simplilearn.com/free-digital-marketing-basics-course-skillup"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Simplilearn – Free Digital Marketing Basics Course
+              </a>
+              :contentReference[oaicite:5]{index=5}
+            </li>
+            <li>
+              <a
+                href="https://www.coursera.org/courses?query=free&skills=Digital+Marketing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Coursera – Free digital marketing courses and certificates
+              </a>
+              :contentReference[oaicite:6]{index=6}
+            </li>
+            <li>
+              <a
+                href="https://backlinko.com/free-online-marketing-classes"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Backlinko – List of recommended free online marketing classes
+              </a>
+              :contentReference[oaicite:7]{index=7}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Crisis management -->
+        <div class="card">
+          <span class="pill">Crisis Management</span>
+          <h3>Preparing for Shocks &amp; Disasters</h3>
+          <p>
+            Crisis management training supports business resiliency when facing
+            disruptions like disasters, economic shocks, or reputation issues.
+          </p>
+          <ul>
+            <li>
+              <a
+                href="https://www.score.org/small-business-crisis-management"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SCORE – Small Business Crisis Management self-paced course
+              </a>
+              :contentReference[oaicite:8]{index=8}
+            </li>
+            <li>
+              <a
+                href="https://professional.mit.edu/course-catalog/crisis-management-business-resiliency"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                MIT Professional Education – Crisis Management &amp; Business Resiliency
+              </a>
+              :contentReference[oaicite:9]{index=9}
+            </li>
+            <li>
+              <a
+                href="https://www.crisisprevention.com/Our-Programs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Crisis Prevention Institute – Crisis prevention and response training
+              </a>
+              :contentReference[oaicite:10]{index=10}
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <section>
+        <h2 class="sidebar-title">How This Supports San Diego</h2>
+        <div class="sidebar-card">
+          <p>
+            By combining training with data-driven insights, Spark 4Change
+            aims to reduce business closures and unemployment in the San Diego
+            region, especially for vulnerable communities.
+          </p>
+          <p>
+            Training modules can be tailored for local industries and delivered
+            in partnership with regional organizations.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sidebar-title">Next Steps</h2>
+        <div class="sidebar-card">
+          <ul>
+            <li>Identify local partners to host training sessions.</li>
+            <li>Integrate the above courses into a curated learning pathway.</li>
+            <li>Connect training completion with job-matching tools and grants.</li>
+          </ul>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2025 Spark 4Change</span>
+      <span>Outcomes · Training · Community Impact</span>
+    </div>
+  </footer>
+</body>
+</html>
