@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spark 4Change – Data &amp; Methods</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo-title">
+        <span>SPARK 4CHANGE</span>
+        <span>Local Business Survival &amp; Community Impact in San Diego</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="outcomes.html">Outcomes</a></li>
+          <li><a href="methods.html" class="active">Data &amp; Methods</a></li>
+          <li><a href="resources.html">Permits &amp; Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <h1 class="page-title">Data &amp; Methodology</h1>
+
+  <main>
+    <div>
+      <section id="data">
+        <h2 class="section-title">Data Collection &amp; Preparation</h2>
+
+        <div class="card">
+          <span class="pill">Data Sources</span>
+          <p>
+            We use open data on population, unemployment, and businesses to
+            understand economic patterns in San Diego.
+          </p>
+          <ul>
+            <li>Population and unemployment statistics over time.</li>
+            <li>Business registrations, openings, and closures.</li>
+            <li>Business location data for spatial analysis.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="pill">Preprocessing</span>
+          <ul>
+            <li>Cleaning missing values and inconsistent entries.</li>
+            <li>Encoding categorical fields and selecting key features.</li>
+            <li>Aggregating data by neighborhood and time period.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="analysis">
+        <h2 class="section-title">Exploratory Analysis</h2>
+
+        <div class="card">
+          <span class="pill">Spatial Mapping</span>
+          <h3>Where are communities at risk?</h3>
+          <p>
+            We map business locations and closures to identify hotspots where
+            communities may be losing jobs and vital services.
+          </p>
+          <ul>
+            <li>Cluster of closures by neighborhood.</li>
+            <li>Overlap with high unemployment or vulnerable populations.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="pill">Time-Series Trends</span>
+          <h3>How do things change over time?</h3>
+          <p>
+            We analyze trends in business creation and closure, and compare
+            them to unemployment trends to anticipate risk.
+          </p>
+          <ul>
+            <li>Changes in openings vs. closures by year.</li>
+            <li>Correlation with unemployment spikes.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="ml">
+        <h2 class="section-title">Machine Learning Models</h2>
+
+        <div class="card">
+          <span class="pill">Predictive Modeling</span>
+          <ul>
+            <li>
+              <strong>Logistic Regression</strong> – Estimate the probability
+              that a business will close based on its characteristics.
+            </li>
+            <li>
+              <strong>Random Forest</strong> – Improve predictive accuracy and
+              capture non-linear relationships and interactions.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="pill">Clustering</span>
+          <p>
+            We group businesses into clusters (by sector, size, or geography)
+            to identify distinct ecosystems within San Diego.
+          </p>
+          <ul>
+            <li>Neighborhood-based business ecosystems.</li>
+            <li>Sector clusters (e.g., hospitality, retail, services).</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="pill">Link to Outcomes</span>
+          <p>
+            Model results guide where to prioritize training programs, policy
+            interventions, and support services to prevent closures and reduce
+            unemployment.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <section>
+        <h2 class="sidebar-title">Analysis Notebook</h2>
+        <div class="sidebar-card">
+          <p>
+            View code, charts, and model experiments in the interactive
+            notebook:
+          </p>
+          <a
+            href="https://colab.research.google.com/drive/1Xa5_e0pcSNnk2MK0d8ZOCOGvUGKisKZn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Colab – Spark 4Change Analysis
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sidebar-title">From Insight to Action</h2>
+        <div class="sidebar-card">
+          <p>
+            Insights from this analysis feed directly into the training
+            programs and guidance captured on the
+            <a href="outcomes.html">Outcomes</a> and
+            <a href="resources.html">Permits &amp; Support</a> pages.
+          </p>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2025 Spark 4Change</span>
+      <span>Data-driven support for local businesses</span>
+    </div>
+  </footer>
+</body>
+</html>
